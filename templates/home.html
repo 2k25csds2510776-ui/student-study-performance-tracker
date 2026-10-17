@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Tracker</title>
+
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='home.css') }}">
+
+    <style>
+        nav a {
+            background-color: rgb(198, 241, 202);
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .tracking {
+            width: 70%;
+            margin: 50px auto;
+        }
+
+        button {
+            background-color: rgb(198, 241, 202);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('signup') }}">Signup</a>
+    </nav>
+
+    <br><br>
+
+    <h1>
+        Welcome to Student Study and Performance Tracker
+    </h1>
+
+    <h2>
+        It is a platform where you can access the records of students.
+    </h2>
+
+    <h3>
+        It is created to help students see their performance based on subjects.
+    </h3>
+
+    <br>
+
+    <img
+        src="https://static.vecteezy.com/system/resources/previews/029/195/991/large_2x/stressed-teen-studying-at-home-capturing-the-realities-of-academic-pressure-and-study-stress-photo.jpg"
+        alt="Student studying"
+        width="600"
+        height="400"
+    >
+
+    <div class="tracking">
+
+        <h1>What You Can Track</h1>
+
+        <ul>
+            <li>
+                📊 Marks - You can track the academic performance
+                of students across different subjects.
+            </li>
+
+            <li>
+                📅 Attendance - You can monitor the attendance
+                records of students over time.
+            </li>
+
+            <li>
+                📚 Assignments - You can manage and track
+                assignments for students across different subjects.
+            </li>
+
+            <li>
+                📝 Exams - You can keep track of exam schedules
+                and results for students.
+            </li>
+        </ul>
+
+    </div>
+
+    <a href="{{ url_for('login') }}">
+        <button>Get Started</button>
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #5792ab,
+        #7e8c70,
+        #254162
+    );
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    
+}
+
+.signup-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+}

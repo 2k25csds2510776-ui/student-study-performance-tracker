@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Student Dashboard
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='dashboard.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <h2>
+            Student Performance Tracker
+        </h2>
+
+
+        <ul>
+
+            <li>
+                <a href="{{ url_for('dashboard') }}">
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url_for('marks') }}">
+                    Marks
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url_for('attendance') }}">
+                    Attendance
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url_for('assignment') }}">
+                    Assignments
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url_for('exam') }}">
+                    Exams
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url_for('study') }}">
+                    Study Hours
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url_for('logout') }}">
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main>
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome">
+
+            <h1>
+                Welcome, {{ fullname }}!
+            </h1>
+
+            <p>
+                Track your academic performance
+                and study progress.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= DASHBOARD CARDS ================= -->
+
+        <section class="dashboard-cards">
+
+
+            <!-- MARKS -->
+
+            <div class="card">
+
+                <h2>
+                    Marks
+                </h2>
+
+                <h3>
+                    {{ average_marks }}%
+                </h3>
+
+                <p>
+                    Overall marks percentage
+                </p>
+
+                <a href="{{ url_for('marks') }}">
+                    View Marks
+                </a>
+
+            </div>
+
+
+
+            <!-- ATTENDANCE -->
+
+            <div class="card">
+
+                <h2>
+                    Attendance
+                </h2>
+
+                <h3>
+                    {{ attendance_percentage }}%
+                </h3>
+
+                <p>
+                    Overall attendance percentage
+                </p>
+
+                <a href="{{ url_for('attendance') }}">
+                    View Attendance
+                </a>
+
+            </div>
+
+
+
+            <!-- ASSIGNMENTS -->
+
+            <div class="card">
+
+                <h2>
+                    Assignments
+                </h2>
+
+                <h3>
+                    {{ pending_assignments }}
+                </h3>
+
+                <p>
+                    Pending assignments
+                </p>
+
+                <a href="{{ url_for('assignment') }}">
+                    View Assignments
+                </a>
+
+            </div>
+
+
+
+            <!-- EXAMS -->
+
+            <div class="card">
+
+                <h2>
+                    Exams
+                </h2>
+
+                <h3>
+                    {{ total_exams }}
+                </h3>
+
+                <p>
+                    Exams added to your schedule
+                </p>
+
+                <a href="{{ url_for('exam') }}">
+                    View Exams
+                </a>
+
+            </div>
+
+
+
+            <!-- STUDY HOURS -->
+
+            <div class="card">
+
+                <h2>
+                    Study Hours
+                </h2>
+
+                <h3>
+                    {{ total_study_hours }}
+                    hours
+                </h3>
+
+                <p>
+                    Total recorded study time
+                </p>
+
+                <a href="{{ url_for('study') }}">
+                    View Study Hours
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>

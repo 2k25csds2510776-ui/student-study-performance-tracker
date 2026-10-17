@@ -1,0 +1,314 @@
+/* =========================================
+   GENERAL PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #5792ab,
+        #7e8c70,
+        #254162
+    );
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+    background-color: #c6f1ca;
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+nav h2 {
+    color: #254162;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   NAVBAR LINKS
+========================================= */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+nav ul li {
+    display: inline-block;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+
+    color: #254162;
+
+    font-weight: bold;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover {
+    background-color: #254162;
+
+    color: white;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome {
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 40px;
+}
+
+
+.welcome h1 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome p {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS CONTAINER
+========================================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.card {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.92
+    );
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+
+/* Card hover */
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.card h2 {
+    color: #254162;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+
+/* =========================================
+   STATISTICS NUMBER
+========================================= */
+
+.card h3 {
+    color: #5792ab;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.card p {
+    color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    min-height: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CARD BUTTON / LINK
+========================================= */
+
+.card a {
+    display: inline-block;
+
+    background-color: #c6f1ca;
+
+    color: #254162;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.card a:hover {
+    background-color: #254162;
+
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    .welcome h1 {
+        font-size: 30px;
+    }
+
+
+    main {
+        width: 95%;
+
+        padding: 30px 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    nav h2 {
+        font-size: 18px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+    }
+
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .welcome h1 {
+        font-size: 26px;
+    }
+}

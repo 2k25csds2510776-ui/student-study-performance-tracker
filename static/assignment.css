@@ -1,0 +1,338 @@
+/* =========================
+   PAGE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #5792ab,
+        #7e8c70,
+        #254162
+    );
+
+    padding-bottom: 50px;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    font-size: 40px;
+
+    color: white;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background-color: #c6f1ca;
+
+    color: #254162;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    background-color: #254162;
+
+    color: white;
+}
+
+
+/* =========================
+   ASSIGNMENT FORM
+========================= */
+
+#assignmentForm {
+    width: 90%;
+
+    max-width: 400px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.92
+    );
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    text-align: left;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
+#assignmentForm label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+    color: #254162;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   INPUTS AND SELECT
+========================= */
+
+#assignmentForm input,
+#assignmentForm select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+#assignmentForm input:focus,
+#assignmentForm select:focus {
+    border-color: #5792ab;
+}
+
+
+/* =========================
+   ADD ASSIGNMENT BUTTON
+========================= */
+
+#assignmentForm > button {
+    display: block;
+
+    width: 180px;
+
+    margin: 25px auto 0;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #c6f1ca;
+
+    color: #254162;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#assignmentForm > button:hover {
+    background-color: #254162;
+
+    color: white;
+}
+
+
+/* =========================
+   ASSIGNMENT RECORD
+========================= */
+
+.assignment_container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+}
+
+
+.assignment_container h2 {
+    color: white;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+#assignmentTable {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.95
+    );
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   TABLE CELLS
+========================= */
+
+#assignmentTable th,
+#assignmentTable td {
+    border: 1px solid #ccc;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+#assignmentTable th {
+    background-color: #c6f1ca;
+
+    color: #254162;
+}
+
+
+/* =========================
+   TABLE ROW HOVER
+========================= */
+
+#assignmentTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* =========================
+   DELETE FORM
+========================= */
+
+.delete-form {
+    margin: 0;
+
+    padding: 0;
+
+    width: auto;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-button {
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #c6f1ca;
+
+    color: #254162;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.delete-button:hover {
+    background-color: #254162;
+
+    color: white;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .assignment_container {
+        overflow-x: auto;
+    }
+
+    #assignmentTable {
+        min-width: 700px;
+    }
+}
